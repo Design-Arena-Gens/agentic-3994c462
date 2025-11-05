@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agentic App</title>
+  <meta name="description" content="A sleek, offline-first, zero-backend starter with useful tools" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230b6cff'/%3E%3Ctext x='50' y='60' font-size='44' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EA%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <span class="logo">A</span>
+      <span class="name">Agentic</span>
+    </div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+      <a class="button" href="https://vercel.com" target="_blank" rel="noreferrer">Deploy</a>
+    </nav>
+  </header>
+
+  <main class="container main">
+    <section class="hero card">
+      <h1>Build faster with Agentic</h1>
+      <p>A modern, responsive starter with zero backend and handy, real-world utilities.</p>
+      <div class="cta">
+        <button id="get-started" class="button primary">Get Started</button>
+        <button id="switch-theme" class="button subtle">Toggle Theme</button>
+      </div>
+    </section>
+
+    <section id="features" class="features-grid">
+      <div class="feature card">
+        <h3>Offline-first</h3>
+        <p>Everything persists locally. Close your tab, your work stays.</p>
+      </div>
+      <div class="feature card">
+        <h3>No Backend</h3>
+        <p>Instant deploy anywhere. Perfect for prototypes and internal tools.</p>
+      </div>
+      <div class="feature card">
+        <h3>Accessible</h3>
+        <p>Keyboard and screen-reader friendly by default.</p>
+      </div>
+      <div class="feature card">
+        <h3>Beautiful</h3>
+        <p>Clean typography, subtle shadows, and adaptive theming.</p>
+      </div>
+    </section>
+
+    <section id="tools" class="tools">
+      <div class="tool card">
+        <h2>Todo List</h2>
+        <form id="todo-form" class="row gap">
+          <input id="todo-input" type="text" placeholder="Add a task..." aria-label="New task" />
+          <button class="button" type="submit">Add</button>
+        </form>
+        <ul id="todo-list" class="list"></ul>
+        <div class="row spread">
+          <small id="todo-count">0 items</small>
+          <button id="todo-clear" class="button subtle">Clear completed</button>
+        </div>
+      </div>
+
+      <div class="tool card">
+        <h2>Notes</h2>
+        <textarea id="notes" rows="8" placeholder="Write anything... (autosaves)"></textarea>
+        <div class="row spread">
+          <small>Autosaved locally</small>
+          <button id="notes-export" class="button">Export JSON</button>
+        </div>
+      </div>
+
+      <div class="tool card">
+        <h2>JSON Formatter</h2>
+        <div class="grid-2">
+          <textarea id="json-input" rows="8" placeholder='Paste JSON here'></textarea>
+          <pre id="json-output" class="code" aria-live="polite"></pre>
+        </div>
+        <div class="row gap">
+          <button id="format-json" class="button">Format</button>
+          <button id="minify-json" class="button subtle">Minify</button>
+          <button id="copy-json" class="button subtle">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about card">
+      <h2>About</h2>
+      <p>This starter is designed to be pragmatic: useful widgets you actually reach for, packed into a single-page app that deploys instantly.</p>
+      <ul>
+        <li>No build step required</li>
+        <li>Zero dependencies</li>
+        <li>Responsive and theme-aware</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <span>? <span id="year"></span> Agentic</span>
+    <div class="row gap">
+      <a href="#features">Features</a>
+      <a href="#tools">Tools</a>
+      <a href="#about">About</a>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
